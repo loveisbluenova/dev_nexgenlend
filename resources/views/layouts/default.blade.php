@@ -13,7 +13,7 @@
     <![endif]-->
     <title>
     	@section('title')
-        | Welcome to Josh Frontend
+        - Welcome to Josh Frontend
         @show
     </title>
     <!--global css starts-->

@@ -1,0 +1,411 @@
+
+body .jconfirm-box-container.custom-alert-ompa button.btn.btn-default,
+.ompa_main_contain_row input[type="button"],
+.ompa_main_contain_row input[type="submit"] {
+    background-color: #0D7714!important
+}
+
+body .gform_wrapper.ompa_main_contain_row ul.gform_fields li h4 {
+    border-color: #d4611f!important;
+    background: none!important
+}
+
+.gform_wrapper.ompa_main_contain_row input[type="text"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="email"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="url"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="password"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="search"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="number"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="tel"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="range"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="date"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="month"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="week"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="time"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="datetime"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="datetime-local"]:focus,
+.gform_wrapper.ompa_main_contain_row input[type="color"]:focus,
+.gform_wrapper.ompa_main_contain_row textarea:focus,
+.gform_wrapper.ompa_main_contain_row select:focus {
+    border-color: #0D7714!important
+}
+
+body .wpex-vc-row-stretched,
+body .vc_row-o-full-height {
+    visibility: visible
+}
+.vc_custom_1416005575553 {
+    margin-top: 60px!important
+}
+
+.vc_custom_1521124974189 {
+    padding-top: 60px!important;
+    padding-bottom: 40px!important;
+    background-color: #f7f7f7!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important
+}
+
+.vc_custom_1509049768308 {
+    padding-top: 140px!important;
+    padding-bottom: 100px!important
+}
+.wpb_animate_when_almost_visible {
+    opacity: 1
+}
+.wpex-carousel-woocommerce .wpex-carousel-entry-details,
+a,
+.wpex-accent-color,
+.main-navigation .dropdown-menu a:hover,
+.main-navigation .dropdown-menu>.current-menu-item>a,
+.main-navigation .dropdown-menu>.current-menu-parent>a,
+h1 a:hover,
+h2 a:hover,
+a:hover h2,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover,
+.entry-title a:hover,
+.modern-menu-widget a:hover,
+.theme-button.outline,
+.theme-button.clean {
+    color: #d4611f
+}
+
+.vcex-skillbar-bar,
+.vcex-icon-box.style-five.link-wrap:hover,
+.vcex-icon-box.style-four.link-wrap:hover,
+.vcex-recent-news-date span.month,
+.vcex-pricing.featured .vcex-pricing-header,
+.vcex-testimonials-fullslider .sp-button:hover,
+.vcex-testimonials-fullslider .sp-selected-button,
+.vcex-social-links a:hover,
+.vcex-testimonials-fullslider.light-skin .sp-button:hover,
+.vcex-testimonials-fullslider.light-skin .sp-selected-button,
+.vcex-divider-dots span,
+.vcex-testimonials-fullslider .sp-button.sp-selected-button,
+.vcex-testimonials-fullslider .sp-button:hover,
+.wpex-accent-bg,
+.post-edit a,
+.background-highlight,
+input[type="submit"],
+.theme-button,
+button,
+.theme-button.outline:hover,
+.active .theme-button,
+.theme-button.active,
+#main .tagcloud a:hover,
+.post-tags a:hover,
+.wpex-carousel .owl-dot.active,
+.wpex-carousel .owl-prev,
+.wpex-carousel .owl-next,
+body #header-two-search #header-two-search-submit,
+#site-navigation .menu-button>a>span.link-inner,
+.modern-menu-widget li.current-menu-item a,
+#sidebar .widget_nav_menu .current-menu-item>a,
+.widget_nav_menu_accordion .widget_nav_menu .current-menu-item>a,
+#wp-calendar caption,
+#wp-calendar tbody td:hover a,
+.navbar-style-six .dropdown-menu>.current-menu-item>a,
+.navbar-style-six .dropdown-menu>.current-menu-parent>a,
+#wpex-sfb-l,
+#wpex-sfb-r,
+#wpex-sfb-t,
+#wpex-sfb-b,
+#site-scroll-top:hover {
+    background-color: #d4611f
+}
+
+.vcex-heading-bottom-border-w-color .vcex-heading-inner {
+    border-bottom-color: #d4611f
+}
+
+.wpb_tabs.tab-style-alternative-two .wpb_tabs_nav li.ui-tabs-active a {
+    border-bottom-color: #d4611f
+}
+
+.theme-button.outline {
+    border-color: #d4611f
+}
+
+#searchform-dropdown {
+    border-color: #d4611f
+}
+
+.toggle-bar-btn:hover {
+    border-top-color: #d4611f;
+    border-right-color: #d4611f
+}
+
+body #site-navigation-wrap.nav-dropdown-top-border .dropdown-menu>li>ul {
+    border-top-color: #d4611f
+}
+
+.theme-heading.border-w-color span.text {
+    border-bottom-color: #d4611f
+}
+
+.post-edit a:hover,
+.theme-button:hover,
+input[type="submit"]:hover,
+button:hover,
+.wpex-carousel .owl-prev:hover,
+.wpex-carousel .owl-next:hover,
+#site-navigation .menu-button>a>span.link-inner:hover {
+    background-color: #d4611f
+}
+
+body {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 16px;
+    color: #444
+}
+
+#site-navigation .dropdown-menu a {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase
+}
+
+#site-navigation .dropdown-menu ul a {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase
+}
+
+.wpex-mobile-menu,
+#sidr-main {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase
+}
+
+.entry h1 {
+    font-weight: 300;
+    font-size: 30px
+}
+
+.entry h2 {
+    font-weight: 400
+}
+
+.entry h3 {
+    font-weight: 400
+}
+
+.entry h4 {
+    font-weight: 400
+}
+
+#copyright {
+    font-size: 12px
+}
+
+.shrink-sticky-header #site-logo img {
+    max-height: 100px!important
+}
+
+.sticky-header-shrunk #site-header-inner {
+    height: 70px
+}
+
+.shrink-sticky-header.sticky-header-shrunk .navbar-style-five .dropdown-menu>li>a {
+    height: 50px
+}
+
+.shrink-sticky-header.sticky-header-shrunk #site-logo img {
+    max-height: 50px!important
+}
+
+body.wpex-mobile-toggle-menu-icon_buttons #site-header-inner.container {
+    padding-right: 0
+}
+
+body.has-mobile-menu #site-navigation-wrap,
+body.has-mobile-menu .hide-at-mm-breakpoint {
+    display: block
+}
+
+body.has-mobile-menu .wpex-mobile-menu-toggle,
+body.has-mobile-menu .show-at-mm-breakpoint {
+    display: none
+}
+
+@media only screen and (max-width:1260px) {
+    body.has-mobile-menu #site-navigation-wrap,
+    body.has-mobile-menu .wpex-hide-at-mm-breakpoint {
+        display: none
+    }
+    body.has-mobile-menu .wpex-mobile-menu-toggle,
+    body.has-mobile-menu .wpex-show-at-mm-breakpoint {
+        display: block
+    }
+    body.wpex-mobile-toggle-menu-icon_buttons #site-logo {
+        height: 100%;
+        float: left;
+        max-width: 75%;
+        text-align: left
+    }
+    body.wpex-mobile-toggle-menu-icon_buttons.rtl #site-logo {
+        float: right;
+        text-align: right
+    }
+    #site-header.wpex-header-two-flex-v #site-header-inner {
+        display: block
+    }
+    .header-two-aside {
+        float: none;
+        clear: both;
+        padding-top: 20px;
+        text-align: left
+    }
+}
+
+.is-sticky #site-header {
+    border-color: transparent
+}
+
+body.page-header-disabled #content-wrap {
+    padding-top: 20px
+}
+
+.page-header.wpex-supports-mods {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.page-header.wpex-supports-mods .page-header-title {
+    color: #565656
+}
+
+.theme-button,
+input[type="submit"],
+button,
+#site-navigation .menu-button>a>span.link-inner {
+    color: #fff;
+    background: #d4611f
+}
+
+.theme-button:hover,
+input[type="submit"]:hover,
+button:hover,
+#site-navigation .menu-button>a:hover>span.link-inner {
+    color: #fff;
+    background: #c4c4c4
+}
+
+.full-width-main-layout .container,
+.full-width-main-layout .vc_row-fluid.container,
+.boxed-main-layout #wrap {
+    width: 1200px
+}
+
+#top-bar-wrap {
+    background-color: #f7f7f7
+}
+
+.wpex-top-bar-sticky {
+    background-color: #f7f7f7
+}
+
+#top-bar {
+    padding-top: 1px;
+    padding-bottom: 1px
+}
+
+#top-bar-social a.wpex-social-btn-no-style {
+    color: #fff
+}
+
+#site-header #site-header-inner {
+    padding-top: 8px
+}
+
+#site-header.overlay-header #site-header-inner {
+    padding-top: 8px;
+    padding-bottom: 8px
+}
+
+#site-header-inner {
+    padding-bottom: 8px
+}
+
+#site-header {
+    background-color: #ccc
+}
+
+#site-header-sticky-wrapper {
+    background-color: #ccc
+}
+
+#site-header-sticky-wrapper.is-sticky #site-header {
+    background-color: #ccc
+}
+
+.footer-has-reveal #site-header {
+    background-color: #ccc
+}
+
+#searchform-header-replace {
+    background-color: #ccc
+}
+
+body.wpex-has-vertical-header #site-header {
+    background-color: #ccc
+}
+
+.wpex-sticky-header-holder.is-sticky #site-header {
+    opacity: .9
+}
+
+#footer {
+    background-color: #f2f2f2;
+    color: #444
+}
+
+#footer p {
+    color: #444
+}
+
+#footer li a:before {
+    color: #444
+}
+
+#footer .widget-recent-posts-icons li .fa {
+    color: #444
+}
+
+#footer strong {
+    color: #444
+}
+
+#footer li {
+    border-color: #e8e8e8
+}
+
+#footer #wp-calendar thead th {
+    border-color: #e8e8e8
+}
+
+#footer #wp-calendar tbody td {
+    border-color: #e8e8e8
+}
+
+#footer a {
+    color: #444
+}
+
+#footer a:hover {
+    color: #afafaf
+}
+
+.footer-widget .widget-title {
+    color: #444
+}
+
+.vc_column-inner {
+    margin-bottom: 40px
+}
