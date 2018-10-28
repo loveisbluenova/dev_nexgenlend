@@ -2,7 +2,7 @@
 * All of the CSS for your public-facing functionality should be
 * included in this file.
 */
-@import url('../../../../../../../../plugins/online-mortgage-plugin-application/public/css/font-awesome.min.css');
+@import url('font-awesome.min.css');
 .gform_wrapper.ompa_main_contain_row * {font-family: 'Open Sans', sans-serif !important; text-transform: capitalize;max-width: 100%;}
 body.page-two-column:not(.archive) #primary .entry-content{width: 100% !important;}
 
