@@ -4,17 +4,17 @@
         <a href="{{ route('admin.dashboard') }}">
             <i class="livicon" data-name="dashboard" data-size="18" data-c="#418BCA" data-hc="#418BCA"
                data-loop="true"></i>
-            <span class="title">Dashboard 1</span>
+            <span class="title">Dashboard</span>
         </a>
     </li>
-
+<!-- 
     <li {!! (Request::is('admin/generator_builder') ? 'class="active"' : '') !!}>
         <a href="{{  URL::to('admin/generator_builder') }}">
             <i class="livicon" data-name="shield" data-size="18" data-c="#F89A14" data-hc="#F89A14"
                data-loop="true"></i>
             Generator Builder
         </a>
-    </li>
+    </li> -->
     <li {!! (Request::is('admin/log_viewers') || Request::is('admin/log_viewers/logs')  ? 'class="active"' : '') !!}>
 
         <a href="{{  URL::to('admin/log_viewers') }}">

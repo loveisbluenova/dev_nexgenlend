@@ -31,7 +31,7 @@
 <body class="skin-josh">
 <header class="header">
     <a href="{{ route('admin.dashboard') }}" class="logo">
-        <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
+        <img class="img-responsive" src="{{ asset('assets/img/logo.png') }}" alt="logo" style="margin: 0 auto;height: 100%;">
     </a>
     <nav class="navbar navbar-static-top" role="navigation">
         <!-- Sidebar toggle button-->
@@ -132,7 +132,7 @@
     <aside class="left-side ">
         <section class="sidebar ">
             <div class="page-sidebar  sidebar-nav">
-                <div class="nav_icons">
+       <!--          <div class="nav_icons">
                     <ul class="sidebar_threeicons">
                         <li>
                             <a href="{{ URL::to('admin/advanced_tables') }}">
@@ -159,8 +159,8 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-                <div class="clearfix"></div>
+                </div> -->
+                <div class="clearfix" style="margin-bottom: 10px;"></div>
                 <!-- BEGIN SIDEBAR MENU -->
                 @include('admin.layouts._left_menu')
                 <!-- END SIDEBAR MENU -->
