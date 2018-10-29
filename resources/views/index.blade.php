@@ -8,99 +8,99 @@ Mortgage Rates in Boise Idaho
 
 {{-- page level styles --}}
 @section('header_styles')
-
+<style>
+.slide-content {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.slider-txt{
+    font-size: 55px;
+    line-height: 65px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    text-align: center;
+    margin: 50px;
+}
+.slider-btn{
+    white-space: nowrap;
+    font-size: 35px;
+    line-height: 35px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    background-color: rgba(212, 97, 31, 0.75);
+    border-color: rgb(0, 0, 0);
+    border-radius: 3px;
+    outline: none;
+    box-shadow: rgb(153, 153, 153) 0px 0px 0px 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    visibility: inherit;
+    transition: none 0s ease 0s;
+    text-align: inherit;
+    margin: 0px;
+    padding: 12px 35px;
+    letter-spacing: 0px;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform-origin: 50% 50% 0px;
+    text-align: center;
+}
+#video_id{
+    height: 100vh;
+}
+video.loading {
+  background: black url(/images/loader.gif) center center no-repeat;
+}
+video {
+    max-width: none;
+}
+</style>
 @stop
 
 {{-- slider --}}
 @section('top')
-    <div class="page-slider clr">
-        <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
-            <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.8">
-                <ul>
-                    <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="../images/slidethumb-100x50.jpg" data-delay="7000" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description=""> <img src="../../images/slidethumb.jpg" alt="" title="slidethumb" width="1773" height="995" data-bgposition="center center" data-bgfit="cover" data-bgparallax="off" class="rev-slidebg" data-no-retina>
-                        <div class="rs-background-video-layer" data-forcerewind="on" data-volume="mute" data-videowidth="100%" data-videoheight="100%" data-videomp4="../video/happy-couple.mp4" data-videopreload="auto" data-videoloop="none" data-forceCover="1" data-aspectratio="16:9" data-autoplay="true" data-autoplayonlyfirsttime="false"></div>
-                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-1-layer-5" data-x="['center','center','center','center']" data-hoffset="['-2','-2','-2','-2']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-fontweight="['100','400','400','400']" data-width="4000" data-height="4000" data-whitespace="nowrap" data-type="shape" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0,0,0,0.4);"></div>
-                        <div class="tp-caption   tp-resizeme" id="slide-1-layer-1" data-x="['center','center','center','center']" data-hoffset="['-2','-2','2','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-77','-77','-112','-145']" data-fontsize="['55','55','45','45']" data-lineheight="['65','65','60','60']" data-color="['rgb(255,255,255)','rgb(255,255,255)','rgba(255,255,255,1)','rgba(255,255,255,1)']" data-width="['936','936','534','451']" data-height="['none','none','none','121']" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","ease":"nothing"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 936px; max-width: 936px; white-space: normal; font-size: 55px; line-height: 65px; font-weight: 700; color: #ffffff; letter-spacing: px;font-family:Montserrat;">Home Financing Made Simple</div>
-                        <div class="tp-caption rev-btn " id="slide-1-layer-9" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['43','43','43','43']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"\/apply-online\/","delay":""}]' data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":2000,"speed":1000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0,0,0,1);bg:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 8; white-space: nowrap; font-size: 35px; line-height: 35px; font-weight: 500; color: rgba(255,255,255,1); letter-spacing: px;font-family:Montserrat;background-color:rgba(212,97,31,0.75);border-color:rgba(0,0,0,1);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Let's Begin</div>
-                    </li>
-                </ul>
-                <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
-            </div>
-            <script>
-                var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
-                var htmlDivCss = "";
-                if (htmlDiv) {
-                    htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-                } else {
-                    var htmlDiv = document.createElement("div");
-                    htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
-                    document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
-                }
-            </script>
-            <script type="text/javascript">
-                if (setREVStartSize !== undefined) setREVStartSize({
-                    c: '#rev_slider_1_1',
-                    responsiveLevels: [1240, 1024, 778, 480],
-                    gridwidth: [1240, 1024, 778, 480],
-                    gridheight: [900, 800, 960, 720],
-                    sliderLayout: 'fullwidth'
-                });
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript">
+  AOS.init();
+jQuery(function($) {
+     $('#video_id').on('loadstart', function (event) {
+    $(this).addClass('loading');
+  });
+  $('#video_id').on('canplay', function (event) {
+    $(this).removeClass('loading');
+    $(this).attr('poster', '');
+  });
+});
+</script>
+    <div class="page-slider">
 
-                var revapi1,
-                    tpj;
-                (function() {
-                    if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad);
-                    else onLoad();
-
-                    function onLoad() {
-                        if (tpj === undefined) {
-                            tpj = jQuery;
-                            if ("off" == "on") tpj.noConflict();
-                        }
-                        if (tpj("#rev_slider_1_1").revolution == undefined) {
-                            revslider_showDoubleJqueryError("#rev_slider_1_1");
-                        } else {
-                            revapi1 = tpj("#rev_slider_1_1").show().revolution({
-                                sliderType: "hero",
-                                jsFileLocation: "//www.nexgenlend.com/wp-content/plugins/revslider/public/assets/js/",
-                                // jsFileLocation: "js/revslider/assets/js/",
-                                sliderLayout: "fullwidth",
-                                dottedOverlay: "none",
-                                delay: 7000,
-                                responsiveLevels: [1240, 1024, 778, 480],
-                                visibilityLevels: [1240, 1024, 778, 480],
-                                gridwidth: [1240, 1024, 778, 480],
-                                gridheight: [900, 800, 960, 720],
-                                lazyType: "none",
-                                parallax: {
-                                    type: "mouse",
-                                    origo: "enterpoint",
-                                    speed: 400,
-                                    speedbg: 0,
-                                    speedls: 0,
-                                    levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 55],
-                                },
-                                shadow: 0,
-                                spinner: "spinner0",
-                                autoHeight: "off",
-                                disableProgressBar: "on",
-                                hideThumbsOnMobile: "off",
-                                hideSliderAtLimit: 0,
-                                hideCaptionAtLimit: 0,
-                                hideAllCaptionAtLilmit: 0,
-                                debugMode: false,
-                                fallbacks: {
-                                    simplifyAll: "off",
-                                    disableFocusListener: false,
-                                }
-                            });
-                        }; /* END OF revapi call */
-
-                    }; /* END OF ON LOAD FUNCTION */
-                }()); /* END OF WRAPPING FUNCTION */
-            </script>
+        <video autoplay muted id="video_id">
+          <source src="../video/happy-couple.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <div class="slide-content">
+            <div class="item" data-aos="zoom-in" data-aos-duration="3000"><p class="slider-txt">Home Financing Made Simple</p></div>
+            <div class="item" data-aos="fade-up" data-aos-duration="3000"><button class="slider-btn">Let's Begin</button></div>
         </div>
     </div>
+  
 @stop
 
 {{-- content --}}
