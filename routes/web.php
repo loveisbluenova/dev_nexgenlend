@@ -220,4 +220,6 @@ Route::post('blogitem/{blog}/comment', 'BlogController@storeComment');
 
 
 Route::get('{name?}', 'FrontEndController@showFrontEndView');
+Route::view('purchase/low-down-payment-purchase-options', 'purchase.low-down-payment-purchase-options');
 # End of frontend views
+

@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-Residential purchase mortgage in Boise ID with NexGen Lending
+Low Down Payment Purchase Options
 @parent
 @stop
 
@@ -20,8 +20,9 @@ Residential purchase mortgage in Boise ID with NexGen Lending
 @section('top')
     <header class="page-header wpex-supports-mods">
         <div class="page-header-inner container clr">
-            <h1 class="page-header-title wpex-clr" itemprop="headline"><span>RESIDENTIAL PURCHASE MORTGAGE IN BOISE ID</span></h1>
-            <nav class="site-breadcrumbs wpex-clr hidden-phone position-absolute has-js-fix"><span class="breadcrumb-trail"><span><span><a href="/">Home</a> &raquo; <span class="breadcrumb_last">Purchase Mortgage in Boise ID</span></span>
+            <h1 class="page-header-title wpex-clr" itemprop="headline"><span>Low Down Payment Purchase Options</span></h1>
+            <nav class="site-breadcrumbs wpex-clr hidden-phone position-absolute has-js-fix"><span class="breadcrumb-trail"><span><span><a href="/">Home</a> &raquo; <span><a href="/purchase">Purchase Mortgage in Boise ID</a> &raquo; <span class="breadcrumb_last">Low Down Payment Purchase Options</span></span>
+                </span>
                 </span>
                 </span>
             </nav>
@@ -32,7 +33,7 @@ Residential purchase mortgage in Boise ID with NexGen Lending
 {{-- content --}}
 @section('content')
     <div id="content-wrap" class="container clr">
-        <div id="primary" class="content-area clr col-md-7">
+        <div id="primary" class="content-area clr">
             <div id="content" class="site-content clr">
                 <article id="single-blocks" class="single-page-article wpex-clr">
                     <div class="single-page-content entry clr">
@@ -42,11 +43,147 @@ Residential purchase mortgage in Boise ID with NexGen Lending
                                     <div class="wpb_wrapper">
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
-                                                <h1>Purchase Mortgage in Boise ID</h1>
-                                                <p>Whether you’re buying your very first home or your very last, NexGen Lending is there with you all the way. We admit the home loan approval process can be a bit stressful at times but our experienced crew and state-of-the-art technology makes getting a purchase mortgage in Boise ID as stress-free as it comes. It doesn’t matter if you’re buying your first home in Kuna or Start or your retirement home in Coeur d’Alene, we have the ideal purchase mortgage in Boise ID option that will fit your needs.</p>
-                                                <p>With just a simple phone call, our expert team can craft a personalized purchase mortgage in Boise ID program designed around you. We’re the low down payment experts with both <a href="../va-loan-boise-id/index.html">VA</a> and <a href="../fha-loan-boise-id/index.html">FHA</a> home loans but we also offer low down payment jumbo financing as well. We know how important it is to save as much cash as possible when buying a home and our competitive rates and low down payment options are the ideal solution.</p>
-                                                <p>And when you’re ready to take the next step to get a purchase mortgage in Boise ID, we can provide you with a preapproval letter that let’s the sellers know your application has been reviewed and credit approved and can close in as little as 15 days. In today’s competitive real estate market, having our preapproval letter gives you that extra boost when presenting your offer. Call us now and let us show you why we think we’re the best in industry!</p>
-                                                <p><span style="font-size: 21px;">Working with NexGen Lending on a purchase mortgage in Boise ID</span></p>
+                                                <h1>Low Down Payment Purchase Options</h1>
+                                                <p>When you have buyers, particularly soon-to-be first time buyers, tell you they’re anxious to buy but need to save up more money for a down payment and closing costs, there are three different solutions and they all come with a government-guarantee. <strong>These three options are the USDA, VA and FHA programs and all have either a low down payment or no down payment needed.</strong> The government-guarantee means the lender is compensated for part or all of the loss should the loan default.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vc_row wpb_row vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <h2><strong>USDA Home Loans</strong></h2>
+                                                <p>The USDA loan is a program designed to finance properties located in rural areas. One of the goals with this United States Department of Agriculture program is to secure a home loan in areas where conventional loans might not approve the area simply due to a lack of comparable sales in the area. Every 10 years the United States performs its census, these areas are identified by the USDA. <strong>This is a zero down program.</strong> The last census was taken in 2010, more than eight years ago so many areas that were deemed rural in 2010 still qualify even though the area where the property is located looks anything but a rural setting. Household income is limited to 115% of the median income for the area.</p>
+                                                <p><strong>USDA Loan Highlights</strong></p>
+                                                <ul>
+                                                    <li>Up to 100% financing available (no down payment required)</li>
+                                                    <li>Competitive, fixed interest rates</li>
+                                                    <li>Credit guidelines may be more lenient than conventional home financing</li>
+                                                    <li>Single upfront mortgage insurance premium that may be financed into the loan</li>
+                                                    <li>Can be used to refinance a mortgage into a lower interest rate</li>
+                                                </ul>
+                                                <p>&nbsp;</p>
+                                                <p><strong>Call today to a free USDA home loan consultation: (888) 455-9088</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vc_row wpb_row vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="vc_btn3-container vc_btn3-inline"> <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-primary" href="http://usda-purchase-3453.itclix.com/" title="" target="_blank">EASY USDA QUALIFIER</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="vc_btn3-container vc_btn3-inline"> <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-warning" href="http://usda-purchase-3453.itclix.com/" title="" target="_blank">FAST USDA RATE CHECKER</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vc_row wpb_row vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <h2><strong>FHA Home Loans</strong></h2>
+                                                <p>Two out of every three first time buyers select the FHA program. It’s not restricted to who can apply nor are there any restrictions regarding location. The down payment requirement is just 3.5% and credit guidelines are somewhat relaxed compared to other low down payment conventional options.</p>
+                                                <p><strong>FHA Loan Highlights:</strong></p>
+                                                <ul>
+                                                    <li>Low minimum down payment (3.5%)</li>
+                                                    <li>Competitive interest rates</li>
+                                                    <li>Credit guidelines may be more lenient than conventional home financing</li>
+                                                    <li>Seller-paid closing costs may be permitted</li>
+                                                    <li>Down payment funds may be in the form of a gift</li>
+                                                </ul>
+                                                <p>&nbsp;</p>
+                                                <p><strong>Call today to a free FHA loan consultation: (888) 455-9088</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vc_row wpb_row vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="vc_btn3-container vc_btn3-inline"> <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-primary" href="http://fha-purchase-3453.clixonit.com/" title="" target="_blank">EASY FHA LOAN QUALIFIER</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="vc_btn3-container vc_btn3-inline"> <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-warning" href="http://fha-purchase-3453.clixonit.com/" title="" target="_blank">FAST FHA RATE CHECKER</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vc_row wpb_row vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <h2><strong>VA Loans</strong></h2>
+                                                <p>VA loans are the most common of zero down programs and are not restricted by location. They are however restricted to veterans, active duty personnel with at least 181 days of service, National Guard and Armed Forces Reserve members with at least six years of service and unremarried surviving spouses of those who died while serving or as a result of a service related injury. In addition, this program requires no monthly mortgage insurance payment like other government-backed loans do. This boosts your clients buying power.</p>
+                                                <p><strong>Call today to a free VA loan consultation: (888) 455-9088</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vc_row wpb_row vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="vc_btn3-container vc_btn3-inline"> <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-primary" href="http://va-purchase-3453.itclix.com/" title="" target="_blank">EASY VA LOAN QUALIFIER</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="vc_btn3-container vc_btn3-inline"> <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-warning" href="http://va-purchase-3453.itclix.com/" title="" target="_blank">FAST VA RATE CHECKER</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vc_row wpb_row vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <h2>Working with NexGen Lending</h2>
                                                 <ul>
                                                     <li>We put YOU first.</li>
                                                 </ul>
@@ -57,7 +194,7 @@ Residential purchase mortgage in Boise ID with NexGen Lending
                                                     <li>Fast and efficient, we close most of our loans in 30 days or less.</li>
                                                 </ul>
                                                 <ul>
-                                                    <li>We offer a variety of loans. NexGen Lending can find you the loan that is right for you!!!</li>
+                                                    <li>We offer a variety of loans. NexGen Lending can help you find the loan that is right for you!!!</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -69,7 +206,7 @@ Residential purchase mortgage in Boise ID with NexGen Lending
                 </article>
             </div>
         </div>
-        <aside id="sidebar" class="sidebar-container sidebar-primary col-m" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+        <aside id="sidebar" class="sidebar-container sidebar-primary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
             <div id="sidebar-inner" class="clr">
                 <div id="gform_widget-3" class="sidebar-box widget gform_widget clr">
                     <div class="widget-title">CONTACT US / (888) 455-9088</div>
@@ -80,7 +217,7 @@ Residential purchase mortgage in Boise ID with NexGen Lending
                     <script type='text/javascript' src='../plugins/gravityforms/js/jquery.maskedinput.min-2.3.3.js'></script>
                     <div class='gf_browser_unknown gform_wrapper' id='gform_wrapper_2'>
                         <a id='gf_2' class='gform_anchor'></a>
-                        <form method='post' enctype='multipart/form-data' id='gform_2' action='/purchase/#gf_2'>
+                        <form method='post' enctype='multipart/form-data' id='gform_2' action='/purchase/low-down-payment-purchase-options/#gf_2'>
                             <div class='gform_body'>
                                 <ul id='gform_fields_2' class='gform_fields top_label form_sublabel_below description_below'>
                                     <li id='field_2_1' class='gfield gf_left_half gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible'>
@@ -151,20 +288,20 @@ Residential purchase mortgage in Boise ID with NexGen Lending
                             <form class="shmac-form" data-currencysymbol="$" data-currencyside="left" data-downpaytype="percent">
                                 <legend>Amortization Calculator</legend>
                                 <div class="mui-form-group shmac-amount">
-                                    <a href="#" class="shmac-tip" title=" " data-title="The total purchase price of the home you wish to buy."> <span> <img src="../images/info.png" class="shmac-info" /> </span> </a>
+                                    <a href="#" class="shmac-tip" title=" " data-title="The total purchase price of the home you wish to buy."> <span> <img src="../../images/info.png" class="shmac-info" /> </span> </a>
                                     <div class="shmac-symbol ">$</div>
                                     <input type="text" class="mort-amount mui-form-control  amountinput_1" value="224,000.00" data-a-dec="." data-a-sep="," />
                                     <label class="mui-form-floating-label">Mortgage Amount</label>
                                     <div class="err-msg"></div>
                                 </div>
                                 <div class="mui-form-group shmac-interest">
-                                    <a href="#" class="shmac-tip" title=" " data-title="The expected percent interest rate you will get on your mortgage."> <span> <img src="../images/info.png" class="shmac-info" /> </span> </a>
+                                    <a href="#" class="shmac-tip" title=" " data-title="The expected percent interest rate you will get on your mortgage."> <span> <img src="../../images/info.png" class="shmac-info" /> </span> </a>
                                     <input type="text" class="interest mui-form-control interestinput_1" value="4.5" data-v-min="0.000" data-v-max="100.000" data-a-pad="false" />
                                     <label class="mui-form-floating-label">Interest Rate (%)</label>
                                     <div class="err-msg"></div>
                                 </div>
                                 <div class="mui-form-group shmac-down">
-                                    <a href="#" class="shmac-tip" title=" " data-title="The percent down payment you wish to put towards the home."> <span> <img src="../images/info.png" class="shmac-info" /> </span> </a>
+                                    <a href="#" class="shmac-tip" title=" " data-title="The percent down payment you wish to put towards the home."> <span> <img src="../../images/info.png" class="shmac-info" /> </span> </a>
                                     <input type="text" class="downpay  mui-form-control  downpayinput_1" value="10" data-v-min="0.000" data-v-max="100.000" data-a-pad="false" />
                                     <label class="mui-form-floating-label">Down Payment (%)</label>
                                     <div class="err-msg"></div>
@@ -178,7 +315,7 @@ Residential purchase mortgage in Boise ID with NexGen Lending
                                         <input type="checkbox" id="term-months-1" class="term-months term-group" />
                                         <label for="term-months-1">Months</label>
                                     </div>
-                                    <a href="#" class="shmac-tip" title=" " data-title="The length of time it will take to repay the loan amount (30 years is common)."> <span> <img src="../images/info.png" class="shmac-info" /> </span> </a>
+                                    <a href="#" class="shmac-tip" title=" " data-title="The length of time it will take to repay the loan amount (30 years is common)."> <span> <img src="../../images/info.png" class="shmac-info" /> </span> </a>
                                     <input type="text" class="term mui-form-control terminput_1" value="30" data-a-pad="false" />
                                     <label class="mui-form-floating-label">Term</label>
                                     <div class="err-msg"></div>
@@ -202,7 +339,7 @@ Residential purchase mortgage in Boise ID with NexGen Lending
                                             <h2>I am ready to get started with my no obligation loan consultation!</h2></header>
                                     </div>
                                     <div class="vc_cta3-actions">
-                                        <div class="vc_btn3-container vc_btn3-center"> <a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-block vc_btn3-icon-left vc_btn3-color-success" href="../quote/index.html" title=""><i class="vc_btn3-icon fa fa-hand-o-up"></i> LETS GET STARTED</a></div>
+                                        <div class="vc_btn3-container vc_btn3-center"> <a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-block vc_btn3-icon-left vc_btn3-color-success" href="../../quote/index.html" title=""><i class="vc_btn3-icon fa fa-hand-o-up"></i> LETS GET STARTED</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -218,7 +355,7 @@ Residential purchase mortgage in Boise ID with NexGen Lending
                                 <br /> Boise, ID 83703</p>
                         </div>
                         <div class="wpex-info-widget-phone wpex-clr"><span class="fa fa-phone"></span><a href="tel:(888) 455-9088">(888) 455-9088</a></div>
-                        <div class="wpex-info-widget-email wpex-clr"><span class="fa fa-envelope"></span><a href="mailto:&#105;&#110;&#102;&#111;&#64;&#110;&#101;xg&#101;n&#108;&#101;n&#100;&#46;com" title="&#105;&#110;&#102;&#111;&#064;&#110;&#101;xg&#101;n&#108;&#101;n&#100;&#046;com">&#105;&#110;&#102;&#111;&#64;&#110;&#101;xg&#101;n&#108;&#101;n&#100;&#46;com</a></div>
+                        <div class="wpex-info-widget-email wpex-clr"><span class="fa fa-envelope"></span><a href="mailto:i&#110;fo&#64;&#110;&#101;&#120;&#103;&#101;&#110;&#108;en&#100;.&#99;om" title="i&#110;fo&#064;&#110;&#101;&#120;&#103;&#101;&#110;&#108;en&#100;.&#099;om">i&#110;fo&#64;&#110;&#101;&#120;&#103;&#101;&#110;&#108;en&#100;.&#99;om</a></div>
                     </div>
                 </div>
             </div>
@@ -227,6 +364,7 @@ Residential purchase mortgage in Boise ID with NexGen Lending
 @stop
 {{-- footer scripts --}}
 @section('footer_scripts')
+    <!-- page level js starts-->
     <!-- page level js starts-->
     <link rel='stylesheet' id='shmac-frontend-css' href='../css/frontend-1.2.css' type='text/css' media='all' />
     <link rel='stylesheet' id='mprogress-css' href='../css/mprogress.min-1.0.css' type='text/css' media='all' />
@@ -246,5 +384,6 @@ Residential purchase mortgage in Boise ID with NexGen Lending
     <script type='text/javascript' src='../plugins/shmac/assets/js/frontend-ajax-1.2.js'></script>
     <script type='text/javascript' src='../plugins/shmac/assets/js/nouislider.min-920.js'></script>
     <script type='text/javascript' src='../plugins/shmac/assets/js/wNumb-110.js'></script>
+    <!--page level js ends-->
     <!--page level js ends-->
 @stop
