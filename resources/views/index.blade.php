@@ -7,70 +7,8 @@ Mortgage Rates in Boise Idaho
 @stop
 
 {{-- page level styles --}}
-@section('header_styles')
-<style>
-.slide-content {
-    position: absolute;
-    top: 0;
-    background: rgba(0, 0, 0, 0.4);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.slider-txt{
-    font-size: 55px;
-    line-height: 65px;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-    font-family: Montserrat;
-    text-align: center;
-    margin: 50px;
-}
-.slider-btn{
-    white-space: nowrap;
-    font-size: 35px;
-    line-height: 35px;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-    font-family: Montserrat;
-    background-color: rgba(212, 97, 31, 0.75);
-    border-color: rgb(0, 0, 0);
-    border-radius: 3px;
-    outline: none;
-    box-shadow: rgb(153, 153, 153) 0px 0px 0px 0px;
-    box-sizing: border-box;
-    cursor: pointer;
-    visibility: inherit;
-    transition: none 0s ease 0s;
-    text-align: inherit;
-    margin: 0px;
-    padding: 12px 35px;
-    letter-spacing: 0px;
-    min-height: 0px;
-    min-width: 0px;
-    max-height: none;
-    max-width: none;
-    opacity: 1;
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-    transform-origin: 50% 50% 0px;
-    text-align: center;
-}
-#video_id{
-    height: 100vh;
-}
-video.loading {
-  background: black url(/images/loader.gif) center center no-repeat;
-}
-video {
-    max-width: none;
-}
-</style>
+@section('header_styles')  
+<link rel='stylesheet' id='wpex-style-css' href='../../css/home.css' type='text/css' media='all' />
 @stop
 
 {{-- slider --}}

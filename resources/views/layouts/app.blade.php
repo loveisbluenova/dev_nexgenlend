@@ -35,7 +35,6 @@
     <meta property="og:description" content="NexGen Lending helps you compare mortgage rates in Boise Idaho, home equity loans, construction loans and other niche loan types." />
     <meta property="og:url" content="https://www.nexgenlend.com/" />
     <meta property="og:site_name" content="NexGen Lending" />
-    <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.nexgenlend.com\/","name":"NexGen Lending","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.nexgenlend.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
     <link rel='dns-prefetch' href='https://fonts.googleapis.com' />
     <link rel='dns-prefetch' href='https://s.w.org' />
     <link rel="alternate" type="application/rss+xml" title="NexGen Lending &raquo; Feed" href="feed/index.html" />
@@ -66,8 +65,6 @@
     <script type='text/javascript' src='../js/revslider/assets/jquery.themepunch.tools.min-5.4.8.js'></script>
     <script type='text/javascript' src='../js/revslider/assets/jquery.themepunch.revolution.min-5.4.8.js'></script>
     <!--[if lt IE 9]> <script type='text/javascript' src='../js/html5-4.7.js'></script> <![endif]-->
-    
-    <link rel='stylesheet' id='wpex-style-css' href='../css/custom.css' type='text/css' media='all' />
     <link rel="icon" href="../images/favicon.png" sizes="32x32">
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="apple-touch-icon" href="../images/favicon.png" sizes="57x57">
@@ -108,24 +105,32 @@
     @yield('header_styles')
     <!--end of page level css-->
 </head>
-
-<body class="home page-template-default page page-id-6 wp-custom-logo wpex-theme wpex-responsive full-width-main-layout has-composer wpex-live-site content-full-width sidebar-widget-icons has-overlay-header page-header-disabled page-with-slider has-post-slider post-slider-below-title wpex-mobile-toggle-menu-icon_buttons has-mobile-menu wpb-js-composer js-comp-ver-5.5.2 vc_responsive"> <a href="#content" class="skip-to-content">skip to Main Content</a><span data-ls_id="#site_top"></span>
+@if(Request::is ('/'))
+    <body class="page-template-default page page-id-6 wp-custom-logo wpex-theme wpex-responsive full-width-main-layout has-composer wpex-live-site content-full-width sidebar-widget-icons has-overlay-header page-header-disabled page-with-slider has-post-slider post-slider-below-title wpex-mobile-toggle-menu-icon_buttons has-mobile-menu wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
+@else
+    <body class="page-template-default page page-id-344 page-parent wp-custom-logo wpex-theme wpex-responsive full-width-main-layout has-composer wpex-live-site content-right-sidebar has-sidebar has-breadcrumbs sidebar-widget-icons hasnt-overlay-header wpex-mobile-toggle-menu-icon_buttons has-mobile-menu wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
+@endif
+ <a href="#content" class="skip-to-content">skip to Main Content</a><span data-ls_id="#site_top"></span>
    
     <div id="outer-wrap" class="clr">
         <div id="wrap" class="clr">
             <div id="overlay-header-wrap" class="clr">
                  <!-- Header Start -->
+                @if(Request::is ('/'))
                 <header id="site-header" class="header-one wpex-dropdowns-shadow-one fixed-scroll shrink-sticky-header anim-shrink-header wpex-dropdown-style-minimal-sq overlay-header white-style custom-bg dyn-styles clr" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+                @else
+                <header id="site-header" class="header-one wpex-dropdowns-shadow-one fixed-scroll shrink-sticky-header anim-shrink-header custom-bg dyn-styles clr" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+                @endif
                     <div id="site-header-inner" class="container clr">
                         <div id="site-logo" class="site-branding clr header-one-logo">
                             <div id="site-logo-inner" class="clr">
-                                <a href="index.html" rel="home" class="main-logo"><img src="../images/nexgen.png" alt="NexGen Lending" class="logo-img" data-no-retina="data-no-retina" /></a>
+                                <a href="{{ route('home') }}" rel="home" class="main-logo"><img src="../images/nexgen.png" alt="NexGen Lending" class="logo-img" data-no-retina="data-no-retina" /></a>
                             </div>
                         </div>
                         <div id="site-navigation-wrap" class="navbar-style-one wpex-dropdowns-caret clr">
                             <nav id="site-navigation" class="navigation main-navigation clr" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" aria-label="Main menu">
                                 <ul id="menu-main-menu" class="dropdown-menu sf-menu">
-                                    <li id="menu-item-912" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-912"><a title="Purchase" href="purchase/index.html"><span class="link-inner">Purchase</span></a>
+                                    <li id="menu-item-912" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-912"><a title="Purchase" href="{{ URL::to('purchase') }}"><span class="link-inner">Purchase</span></a>
                                         <ul class="sub-menu">
                                             <li id="menu-item-913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-913"><a title="Low Down Payment Purchase Options" href="purchase/low-down-payment-purchase-options/index.html"><span class="link-inner">Low Down Payment Purchase Options</span></a></li>
                                             <li id="menu-item-914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-914"><a title="Making Sure You Are Prequalified" href="purchase/getting-mortgage-preapproved-in-boise-id/index.html"><span class="link-inner">Mortgage Preapproved</span></a></li>
