@@ -225,5 +225,7 @@ Route::get('{name?}', 'FrontEndController@showFrontEndView');
 Route::view('purchase/low-down-payment-purchase-options', 'purchase.low-down-payment-purchase-options');
 
 Route::view('purchase/getting-mortgage-preapproved-in-boise-id', 'purchase.getting-mortgage-preapproved-in-boise-id');
+
+Route::view('purchase/boise-id-first-time-home-buyer', 'purchase.boise-id-first-time-home-buyer');
 # End of frontend views
 
