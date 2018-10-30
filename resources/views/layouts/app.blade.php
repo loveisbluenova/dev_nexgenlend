@@ -105,7 +105,7 @@
     @yield('header_styles')
     <!--end of page level css-->
 </head>
-@if(Request::is ('/') || Request::is('mortgage-calculator'))
+@if(Request::is ('/') || Request::is('mortgage-calculator') || Request::is('loan-options'))
     <body class="page-template-default page page-id-6 wp-custom-logo wpex-theme wpex-responsive full-width-main-layout has-composer wpex-live-site content-full-width sidebar-widget-icons has-overlay-header page-header-disabled page-with-slider has-post-slider post-slider-below-title wpex-mobile-toggle-menu-icon_buttons has-mobile-menu wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
 @else
     <body class="page-template-default page page-id-344 page-parent wp-custom-logo wpex-theme wpex-responsive full-width-main-layout has-composer wpex-live-site content-right-sidebar has-sidebar has-breadcrumbs sidebar-widget-icons hasnt-overlay-header wpex-mobile-toggle-menu-icon_buttons has-mobile-menu wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
@@ -147,12 +147,12 @@
                                             <li id="menu-item-2024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2024"><a title="Mortgage Calculator" href="{{ URL::to('mortgage-calculator') }}"><span class="link-inner">Mortgage Calculator</span></a></li>
                                         </ul>
                                     </li>
-                                    <li id="menu-item-906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-906"><a title="Loan Options" href="loan-options/index.html"><span class="link-inner">Loan Options</span></a>
+                                    <li id="menu-item-906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-906"><a title="Loan Options" href="{{ URL::to('loan-options') }}"><span class="link-inner">Loan Options</span></a>
                                         <ul class="sub-menu">
-                                            <li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a title="Fixed Rate Mortgage" href="loan-options/fixed-rate-mortgage/index.html"><span class="link-inner">fixed rate mortgage</span></a></li>
-                                            <li id="menu-item-909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-909"><a title="FHA Home Loan" href="loan-options/fha-loan-in-boise-id/index.html"><span class="link-inner">FHA Loan</span></a></li>
-                                            <li id="menu-item-911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-911"><a title="VA Home Loan" href="loan-options/va-home-loan/index.html"><span class="link-inner">VA Home Loan</span></a></li>
-                                            <li id="menu-item-910" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-910"><a title="Jumbo Home Loan" href="loan-options/jumbo-home-loan/index.html"><span class="link-inner">Jumbo Home Loans</span></a></li>
+                                            <li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a title="Fixed Rate Mortgage" href="{{ URL::to('loan-options/fixed-rate-mortgage') }}"><span class="link-inner">fixed rate mortgage</span></a></li>
+                                            <li id="menu-item-909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-909"><a title="FHA Home Loan" href="{{ URL::to('loan-options/fha-loan-in-boise-id') }}"><span class="link-inner">FHA Loan</span></a></li>
+                                            <li id="menu-item-911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-911"><a title="VA Home Loan" href="{{ URL::to('loan-options/va-home-loan') }}"><span class="link-inner">VA Home Loan</span></a></li>
+                                            <li id="menu-item-910" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-910"><a title="Jumbo Home Loan" href="{{ URL::to('loan-options/jumbo-home-loan') }}"><span class="link-inner">Jumbo Home Loans</span></a></li>
                                         </ul>
                                     </li>
                                     <li id="menu-item-899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-899"><a title="About Us" href="about-us/index.html"><span class="link-inner">About Us</span></a>

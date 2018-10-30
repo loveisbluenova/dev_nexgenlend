@@ -232,5 +232,11 @@ Route::view('refinance/lower-your-payment', 'refinance.lower-your-payment');
 Route::view('refinance/consolidate-your-debt', 'refinance.consolidate-your-debt');
 Route::view('refinance/pay-off-your-mortgage-faster', 'refinance.pay-off-your-mortgage-faster');
 
+#Loan options
+Route::view('loan-options/fixed-rate-mortgage', 'loan-options.fixed-rate-mortgage');
+Route::view('loan-options/fha-loan-in-boise-id', 'loan-options.fha-loan-in-boise-id');
+Route::view('loan-options/va-home-loan', 'loan-options.va-home-loan');
+Route::view('loan-options/jumbo-home-loan', 'loan-options.jumbo-home-loan');
+
 # End of frontend views
 
