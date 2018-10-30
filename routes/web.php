@@ -220,6 +220,10 @@ Route::post('blogitem/{blog}/comment', 'BlogController@storeComment');
 
 
 Route::get('{name?}', 'FrontEndController@showFrontEndView');
+
+# Purchase
 Route::view('purchase/low-down-payment-purchase-options', 'purchase.low-down-payment-purchase-options');
+
+Route::view('purchase/getting-mortgage-preapproved-in-boise-id', 'purchase.getting-mortgage-preapproved-in-boise-id');
 # End of frontend views
 
