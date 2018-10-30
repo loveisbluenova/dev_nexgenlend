@@ -105,7 +105,7 @@
     @yield('header_styles')
     <!--end of page level css-->
 </head>
-@if(Request::is ('/'))
+@if(Request::is ('/') || Request::is('mortgage-calculator'))
     <body class="page-template-default page page-id-6 wp-custom-logo wpex-theme wpex-responsive full-width-main-layout has-composer wpex-live-site content-full-width sidebar-widget-icons has-overlay-header page-header-disabled page-with-slider has-post-slider post-slider-below-title wpex-mobile-toggle-menu-icon_buttons has-mobile-menu wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
 @else
     <body class="page-template-default page page-id-344 page-parent wp-custom-logo wpex-theme wpex-responsive full-width-main-layout has-composer wpex-live-site content-right-sidebar has-sidebar has-breadcrumbs sidebar-widget-icons hasnt-overlay-header wpex-mobile-toggle-menu-icon_buttons has-mobile-menu wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
@@ -135,8 +135,8 @@
                                             <li id="menu-item-913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-913"><a title="Low Down Payment Purchase Options" href="{{ URL::to('purchase/low-down-payment-purchase-options') }}"><span class="link-inner">Low Down Payment Purchase Options</span></a></li>
                                             <li id="menu-item-914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-914"><a title="Making Sure You Are Prequalified" href="{{ URL::to('purchase/getting-mortgage-preapproved-in-boise-id') }}"><span class="link-inner">Mortgage Preapproved</span></a></li>
                                             <li id="menu-item-916" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-916"><a title="First Time Home Buyer" href="{{ URL::to('purchase/boise-id-first-time-home-buyer') }}"><span class="link-inner">First Time Home Buyer</span></a></li>
-                                            <li id="menu-item-915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-915"><a title="Vacation Homes" href="purchase/investment-property-in-boise-id/index.html"><span class="link-inner">Investment Property Loans</span></a></li>
-                                            <li id="menu-item-1963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1963"><a title="Mortgage Calculator" href="mortgage-calculator/index.html"><span class="link-inner">Mortgage Calculator</span></a></li>
+                                            <li id="menu-item-915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-915"><a title="Vacation Homes" href="{{ URL::to('purchase/investment-property-in-boise-id') }}"><span class="link-inner">Investment Property Loans</span></a></li>
+                                            <li id="menu-item-1963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1963"><a title="Mortgage Calculator" href="{{ URL::to('mortgage-calculator') }}"><span class="link-inner">Mortgage Calculator</span></a></li>
                                         </ul>
                                     </li>
                                     <li id="menu-item-917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-917"><a title="Refinance" href="refinance/index.html"><span class="link-inner">Refinance</span></a>

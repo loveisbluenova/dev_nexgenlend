@@ -400,6 +400,11 @@ margin-bottom: 40px
 #site-header{
     background-color: #ccc !important;
 }
+.shmac-form .mui-btn.submit-shmac, .shmac-form .mui-btn.submit-shmac:hover {
+    background-image: none;
+    background-color: #a4d06e;
+    color: #ffffff;
+}
 @media only screen and (min-width: 641px){
     .gform_wrapper .top_label li.gfield.gf_left_half, .gform_wrapper .top_label li.gfield.gf_right_half {
         width: 49% !important;
