@@ -226,5 +226,11 @@ Route::view('purchase/low-down-payment-purchase-options', 'purchase.low-down-pay
 Route::view('purchase/getting-mortgage-preapproved-in-boise-id', 'purchase.getting-mortgage-preapproved-in-boise-id');
 Route::view('purchase/boise-id-first-time-home-buyer', 'purchase.boise-id-first-time-home-buyer');
 Route::view('purchase/investment-property-in-boise-id', 'purchase.investment-property-in-boise-id');
+
+#Refinance
+Route::view('refinance/lower-your-payment', 'refinance.lower-your-payment');
+Route::view('refinance/consolidate-your-debt', 'refinance.consolidate-your-debt');
+Route::view('refinance/pay-off-your-mortgage-faster', 'refinance.pay-off-your-mortgage-faster');
+
 # End of frontend views
 
