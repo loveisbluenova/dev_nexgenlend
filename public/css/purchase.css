@@ -405,6 +405,28 @@ margin-bottom: 40px
     background-color: #a4d06e;
     color: #ffffff;
 }
+.vc_custom_1447719892227 {
+    border-top-width: 3px!important;
+    border-right-width: 3px!important;
+    border-bottom-width: 3px!important;
+    border-left-width: 3px!important;
+    padding-right: 15px!important;
+    padding-left: 15px!important;
+    border-left-color: #b7b7b7!important;
+    border-left-style: double!important;
+    border-right-color: #b7b7b7!important;
+    border-right-style: double!important;
+    border-top-color: #b7b7b7!important;
+    border-top-style: double!important;
+    border-bottom-color: #b7b7b7!important;
+    border-bottom-style: double!important
+}
+
+.vc_custom_1491492500501 {
+    border-bottom-width: 3px!important;
+    border-bottom-color: #b7b7b7!important;
+    border-bottom-style: double!important
+}
 @media only screen and (min-width: 641px){
     .gform_wrapper .top_label li.gfield.gf_left_half, .gform_wrapper .top_label li.gfield.gf_right_half {
         width: 49% !important;
