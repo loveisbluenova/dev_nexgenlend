@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-Low Down Payment Purchase Options
+Getting Mortgage Preapproved in Boise ID
 @parent
 @stop
 
