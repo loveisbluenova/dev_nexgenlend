@@ -3,7 +3,6 @@
 use App\Http\Controllers\JoshController;
 use App\Http\Requests\StaffRequest;
 use App\Mail\Register;
-use App\User;
 use App\Staff;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use File;
@@ -16,7 +15,6 @@ use URL;
 use View;
 use Yajra\DataTables\DataTables;
 use Validator;
-Use App\Mail\Restore;
 
 
 
@@ -32,6 +30,7 @@ class StaffsController extends JoshController
     public function index()
     {
 
+        $staffs = Staff::all();
         // Show the page
         return view('admin.staffs.index', compact('staffs'));
     }
@@ -44,7 +43,7 @@ class StaffsController extends JoshController
      */
     public function data()
     {
-        $staffs = Staff::get(['id', 'name', 'job', 'NMLS', 'email', 'phone']);
+        $staffs = Staff::get(['id', 'first_name', 'last_name', 'job', 'NMLS', 'email', 'phone']);
 
         return DataTables::of($staffs)
             ->editColumn('created_at',function(Staff $staff) {

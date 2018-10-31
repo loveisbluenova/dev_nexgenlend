@@ -94,6 +94,28 @@
             </li>
         </ul>
     </li>
+    <li {!! (Request::is('admin/staffs') || Request::is('admin/staffs/create') || Request::is('admin/staffs/*') ? 'class="active"' : '') !!}>
+        <a href="#">
+            <i class="livicon" data-name="user" data-size="18" data-c="#6CC66C" data-hc="#6CC66C"
+               data-loop="true"></i>
+            <span class="title">Staffs</span>
+            <span class="fa arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li {!! (Request::is('admin/staffs') ? 'class="active" id="active"' : '') !!}>
+                <a href="{{ URL::to('admin/staffs') }}">
+                    <i class="fa fa-angle-double-right"></i>
+                    Staffs
+                </a>
+            </li>
+            <li {!! (Request::is('admin/staffs/create') ? 'class="active" id="active"' : '') !!}>
+                <a href="{{ URL::to('admin/staffs/create') }}">
+                    <i class="fa fa-angle-double-right"></i>
+                    Add New Staff
+                </a>
+            </li>
+        </ul>
+    </li>
     <li {!! ((Request::is('admin/blogcategory') || Request::is('admin/blogcategory/create') || Request::is('admin/blog') ||  Request::is('admin/blog/create')) || Request::is('admin/blog/*') || Request::is('admin/blogcategory/*') ? 'class="active"' : '') !!}>
         <a href="#">
             <i class="livicon" data-name="comment" data-c="#F89A14" data-hc="#F89A14" data-size="18"

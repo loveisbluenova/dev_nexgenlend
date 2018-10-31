@@ -134,6 +134,7 @@ Route::group(['prefix' => 'admin','namespace'=>'Admin', 'middleware' => 'admin',
 
     #Staffs
     Route::resource('staffs', 'StaffsController');
+    Route::get('staffs/data', 'StaffsController@data')->name('staffs.data');
 
 
     /* laravel example routes */
