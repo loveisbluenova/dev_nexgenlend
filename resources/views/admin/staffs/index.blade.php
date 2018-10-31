@@ -65,19 +65,19 @@ Users List
                             <td>{!! $staff->NMLS !!}</td>
                             <td>{!! $staff->email !!}</td>
                             <td>{!! $staff->phone !!}</td>
-                            <td>{!! $role->created_at->diffForHumans() !!}</td>
+                            <td>{!! $staff->created_at->diffForHumans() !!}</td>
                             <td>
                                 <a href="{{ route('admin.staffs.edit', $staff->id) }}">
                                         <i class="livicon" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="edit staff"></i>
                                     </a>
                                     <!-- let's not delete 'Admin' group by accident -->
-                                    @if ($role->id !== 1)
-                                            <a href="{{ route('admin.groups.confirm-delete', $role->id) }}" data-toggle="modal" data-target="#delete_confirm">
-                                                <i class="livicon" data-name="remove-alt" data-size="18"
-                                                   data-loop="true" data-c="#f56954" data-hc="#f56954"
-                                                   title="@lang('groups/form.delete_group')"></i>
-                                            </a>
-                                    @endif
+                                  
+                                <a href="{{ route('admin.staffs.confirm-delete', $staff->id) }}" data-toggle="modal" data-target="#delete_confirm">
+                                    <i class="livicon" data-name="remove-alt" data-size="18"
+                                       data-loop="true" data-c="#f56954" data-hc="#f56954"
+                                       title="@lang('groups/form.delete_group')"></i>
+                                </a>
+                                    
                             </td>
                         </tr>
                         @endforeach
@@ -96,30 +96,9 @@ Users List
     <script type="text/javascript" src="{{ asset('assets/vendors/datatables/js/dataTables.bootstrap.js') }}" ></script>
 
 <script>
-    $(function() {
-        var table = $('#table').DataTable({
-            processing: true,
-            serverSide: true,
-            ajax: '{!! route('admin.staffs.data') !!}',
-            columns: [
-                { data: 'id', name: 'id' },
-                { data: 'first_name', name: 'first_name' },
-                { data: 'last_name', name: 'last_name' },
-                { data: 'job', name: 'job' },
-                { data: 'NMLS', name: 'job' },
-                { data: 'email', name: 'email' },
-                { data: 'phone', name: 'status'},
-                { data: 'created_at', name:'created_at'},
-                { data: 'actions', name: 'actions', orderable: false, searchable: false }
-            ]
-        });
-        table.on( 'draw', function () {
-            $('.livicon').each(function(){
-                $(this).updateLivicon();
-            });
-        } );
+    $(document).ready(function() {
+        $('#table').DataTable();
     });
-
 </script>
 
 <div class="modal fade" id="delete_confirm" tabindex="-1" role="dialog" aria-labelledby="user_delete_confirm_title" aria-hidden="true">
