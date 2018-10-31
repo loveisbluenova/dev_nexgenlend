@@ -132,6 +132,9 @@ Route::group(['prefix' => 'admin','namespace'=>'Admin', 'middleware' => 'admin',
         return redirect('admin/imagecropping');
     });
 
+    #Staffs
+    Route::resource('staffs', 'StaffsController');
+
 
     /* laravel example routes */
     #Charts
