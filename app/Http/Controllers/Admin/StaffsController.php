@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StaffRequest;
 use App\Staff;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use File;
@@ -11,9 +12,8 @@ use Redirect;
 use Sentinel;
 use URL;
 use View;
+use Yajra\DataTables\DataTables;
 use Validator;
-
-
 
 class StaffsController extends Controller
 {
@@ -69,17 +69,30 @@ class StaffsController extends Controller
         $new_staff = new Staff;
         $new_staff->first_name = $request->input('firstName');
         $new_staff->last_name = $request->input('lastName');
+        $new_staff->slug = strtolower($request->input('firstName')).'-'.strtolower($request->input('lastName'));
         $new_staff->job = $request->input('job');
         $new_staff->NMLS = $request->input('NMLS');
         $new_staff->email = $request->input('email');
         $new_staff->phone = $request->input('phone');
         $new_staff->pic = $request['pic'];
-        $new_staff->profile = $request->$request['profile'];
+        $new_staff->profile = $request->input('profile');
         $new_staff->save();
 
 
         // Redirect to the staff creation page
-        return Redirect::route('admin.staffs.index')->with('success', trans('users/message.success.create'));
+        return Redirect::route('admin.staffs.index')->with('success', trans('staffs/message.success.create'));
+    }
+
+    public function show($id)
+    {
+        $staff = Staff::find($id);
+
+        $model = 'staffs';
+        $confirm_route = $error = null;
+
+        $confirm_route = '/admin/staffs/'.$staff->id.'/delete';
+
+        return view('admin.layouts.modal_confirmation', compact('error', 'model', 'confirm_route'));
     }
 
     /**
@@ -88,20 +101,13 @@ class StaffsController extends Controller
      * @param  int $id
      * @return View
      */
-    public function edit(Staff $staff)
+    public function edit($id)
     {
 
-        // Get this user groups
-        $userRoles = $user->getRoles()->pluck('name', 'id')->all();
-        // Get a list of all the available groups
-        $roles = Sentinel::getRoleRepository()->all();
-
-        $status = Activation::completed($user);
-
-        $countries = $this->countries;
+        $staff = Staff::find($id);
 
         // Show the page
-        return view('admin.users.edit', compact('user', 'roles', 'userRoles', 'countries', 'status'));
+        return view('admin.staffs.edit', compact('staff'));
     }
 
     /**
@@ -111,157 +117,47 @@ class StaffsController extends Controller
      * @param UserRequest $request
      * @return Redirect
      */
-    public function update(User $user, UserRequest $request)
+    public function update(Request $request, $id)
     {
 
+        $staff = Staff::find($id);
 
-        try {
-            $user->update($request->except('pic_file','password','password_confirm','groups','activate'));
-
-            if ( !empty($request->password)) {
-                $user->password = Hash::make($request->password);
+        // is new image uploaded?
+        if ($file = $request->file('pic_file')) {
+            $extension = $file->extension()?: 'png';
+            $destinationPath = public_path() . '/uploads/staffs/';
+            $safeName = str_random(10) . '.' . $extension;
+            $file->move($destinationPath, $safeName);
+            //delete old pic if exists
+            if (File::exists($destinationPath . $staff->pic)) {
+                File::delete($destinationPath . $staff->pic);
             }
-
-            // is new image uploaded?
-            if ($file = $request->file('pic_file')) {
-                $extension = $file->extension()?: 'png';
-                $destinationPath = public_path() . '/uploads/users/';
-                $safeName = str_random(10) . '.' . $extension;
-                $file->move($destinationPath, $safeName);
-                //delete old pic if exists
-                if (File::exists($destinationPath . $user->pic)) {
-                    File::delete($destinationPath . $user->pic);
-                }
-                //save new file path into db
-                $user->pic = $safeName;
-            }
-
-            //save record
-            $user->save();
-
-            // Get the current user groups
-            $userRoles = $user->roles()->pluck('id')->all();
-
-            // Get the selected groups
-
-            $selectedRoles = $request->get('groups');
-
-            // Groups comparison between the groups the user currently
-            // have and the groups the user wish to have.
-            $rolesToAdd = array_diff($selectedRoles, $userRoles);
-            $rolesToRemove = array_diff($userRoles, $selectedRoles);
-
-            // Assign the user to groups
-
-            foreach ($rolesToAdd as $roleId) {
-                $role = Sentinel::findRoleById($roleId);
-                $role->users()->attach($user);
-            }
-
-            // Remove the user from groups
-            foreach ($rolesToRemove as $roleId) {
-                $role = Sentinel::findRoleById($roleId);
-                $role->users()->detach($user);
-            }
-
-            // Activate / De-activate user
-
-            $status = $activation = Activation::completed($user);
-
-            if ($request->get('activate') != $status) {
-                if ($request->get('activate')) {
-                    $activation = Activation::exists($user);
-                    if ($activation) {
-                        Activation::complete($user, $activation->code);
-                    }
-                } else {
-                    //remove existing activation record
-                    Activation::remove($user);
-                    //add new record
-                    Activation::create($user);
-                    //send activation mail
-                    $data=[
-                        'user_name' =>$user->first_name .' '. $user->last_name,
-                    'activationUrl' => URL::route('activate', [$user->id, Activation::exists($user)->code])
-                    ];
-                    // Send the activation code through email
-                    Mail::to($user->email)
-                        ->send(new Restore($data));
-
-                }
-            }
-
-            // Was the user updated?
-            if ($user->save()) {
-                // Prepare the success message
-                $success = trans('users/message.success.update');
-               //Activity log for user update
-                activity($user->full_name)
-                    ->performedOn($user)
-                    ->causedBy($user)
-                    ->log('User Updated by '.Sentinel::getUser()->full_name);
-                // Redirect to the user page
-                return Redirect::route('admin.users.edit', $user)->with('success', $success);
-            }
-
-            // Prepare the error message
-            $error = trans('users/message.error.update');
-        } catch (UserNotFoundException $e) {
-            // Prepare the error message
-            $error = trans('users/message.user_not_found', compact('id'));
-
-            // Redirect to the user management page
-            return Redirect::route('admin.users.index')->with('error', $error);
+            //save new file path into db
+            $staff->pic = $safeName;
         }
 
-        // Redirect to the user page
-        return Redirect::route('admin.users.edit', $user)->withInput()->with('error', $error);
+        $staff->first_name = $request->input('firstName');
+        $staff->last_name = $request->input('lastName');
+        $staff->slug = strtolower($request->input('firstName')).'-'.strtolower($request->input('lastName'));
+        $staff->job = $request->input('job');
+        $staff->NMLS = $request->input('NMLS');
+        $staff->email = $request->input('email');
+        $staff->phone = $request->input('phone');
+        $staff->profile = $request->input('profile');
+            //save record
+        $staff->save();
+
+        
+        $success = trans('staffs/message.success.update');
+
+        return Redirect::route('admin.staffs.edit', $staff)->with('success', $success);
     }
 
     /**
      * Show a list of all the deleted users.
      *
      * @return View
-     */
-    public function getDeletedUsers()
-    {
-        // Grab deleted users
-        $staffs = Staff::onlyTrashed()->get();
-
-        // Show the page
-        return view('admin.deleted_staffs', compact('staffs'));
-    }
-
-
-    /**
-     * Delete Confirm
      *
-     * @param   int $id
-     * @return  View
-     */
-    public function getModalDelete($id)
-    {
-        $model = 'users';
-        $confirm_route = $error = null;
-        try {
-            // Get user information
-            $user = Sentinel::findById($id);
-
-            // Check if we are not trying to delete ourselves
-            if ($user->id === Sentinel::getUser()->id) {
-                // Prepare the error message
-                $error = trans('users/message.error.delete');
-
-                return view('admin.layouts.modal_confirmation', compact('error', 'model', 'confirm_route'));
-            }
-        } catch (UserNotFoundException $e) {
-            // Prepare the error message
-            $error = trans('users/message.user_not_found', compact('id'));
-            return view('admin.layouts.modal_confirmation', compact('error', 'model', 'confirm_route'));
-        }
-        $confirm_route = route('admin.users.delete', ['id' => $user->id]);
-        return view('admin.layouts.modal_confirmation', compact('error', 'model', 'confirm_route'));
-    }
 
     /**
      * Delete the given user.
@@ -269,38 +165,13 @@ class StaffsController extends Controller
      * @param  int $id
      * @return Redirect
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        try {
-            // Get user information
-            $user = Sentinel::findById($id);
-            // Check if we are not trying to delete ourselves
-            if ($user->id === Sentinel::getUser()->id) {
-                // Prepare the error message
-                $error = trans('admin/users/message.error.delete');
-                // Redirect to the user management page
-                return Redirect::route('admin.users.index')->with('error', $error);
-            }
-            // Delete the user
-            //to allow soft deleted, we are performing query on users model instead of Sentinel model
-            User::destroy($id);
-            Activation::where('user_id',$user->id)->delete();
-            // Prepare the success message
-            $success = trans('users/message.success.delete');
-            //Activity log for user delete
-            activity($user->full_name)
-                ->performedOn($user)
-                ->causedBy($user)
-                ->log('User deleted by '.Sentinel::getUser()->full_name);
-            // Redirect to the user management page
-            return Redirect::route('admin.users.index')->with('success', $success);
-        } catch (UserNotFoundException $e) {
-            // Prepare the error message
-            $error = trans('admin/users/message.user_not_found', compact('id'));
-
-            // Redirect to the user management page
-            return Redirect::route('admin.users.index')->with('error', $error);
-        }
+        Staff::destroy($id);
+        // Prepare the success message
+        $success = trans('staffs/message.success.delete');
+        // Redirect to the user management page
+        return Redirect::route('admin.staffs.index')->with('success', $success);
     }
 
     /**
@@ -309,90 +180,4 @@ class StaffsController extends Controller
      * @param  int $id
      * @return Redirect
      */
-    public function getRestore($id)
-    {
-        try {
-            // Get user information
-            $user = User::withTrashed()->find($id);
-            // Restore the user
-            $user->restore();
-            // create activation record for user and send mail with activation link
-//            $data->user_name = $user->first_name .' '. $user->last_name;
-//            $data->activationUrl = URL::route('activate', [$user->id, Activation::create($user)->code]);
-            // Send the activation code through email
-           $data=[
-               'user_name' => $user->first_name .' '. $user->last_name,
-            'activationUrl' => URL::route('activate', [$user->id, Activation::create($user)->code])
-           ];
-            Mail::to($user->email)
-                ->send(new Restore($data));
-            // Prepare the success message
-            $success = trans('users/message.success.restored');
-            activity($user->full_name)
-                ->performedOn($user)
-                ->causedBy($user)
-                ->log('User restored by '.Sentinel::getUser()->full_name);
-            // Redirect to the user management page
-            return Redirect::route('admin.deleted_users')->with('success', $success);
-        } catch (UserNotFoundException $e) {
-            // Prepare the error message
-            $error = trans('users/message.user_not_found', compact('id'));
-
-            // Redirect to the user management page
-            return Redirect::route('admin.deleted_users')->with('error', $error);
-        }
-    }
-
-    /**
-     * Display specified user profile.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        try {
-            // Get the user information
-            $user = Sentinel::findUserById($id);
-            //get country name
-            if ($user->country) {
-                $user->country = $this->countries[$user->country];
-            }
-        } catch (UserNotFoundException $e) {
-            // Prepare the error message
-            $error = trans('users/message.user_not_found', compact('id'));
-            // Redirect to the user management page
-            return Redirect::route('admin.users.index')->with('error', $error);
-        }
-        // Show the page
-        return view('admin.users.show', compact('user'));
-
-    }
-
-    public function passwordreset( Request $request)
-    {
-        $id = $request->id;
-        $user = Sentinel::findUserById($id);
-        $password = $request->get('password');
-        $user->password = Hash::make($password);
-        $user->save();
-    }
-
-    public function lockscreen($id){
-
-        if (Sentinel::check()) {
-            $user = Sentinel::findUserById($id);
-            return view('admin.lockscreen',compact('user'));
-        }
-        return view('admin.login');
-    }
-
-    public function postLockscreen(Request $request){
-        $password = Sentinel::getUser()->password;
-        if(Hash::check($request->password,$password)){
-            return 'success';
-        } else{
-            return 'error';
-        }
-    }
 }

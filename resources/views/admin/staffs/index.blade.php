@@ -72,10 +72,10 @@ Staffs List
                                     </a>
                                     <!-- let's not delete 'Admin' group by accident -->
                                   
-                                <a href="{{ route('admin.staffs.destroy', $staff->id) }}" data-toggle="modal" data-target="#delete_confirm">
+                                <a href="{{ route('admin.staffs.show', $staff->id) }}" data-toggle="modal" data-target="#delete_confirm">
                                     <i class="livicon" data-name="remove-alt" data-size="18"
                                        data-loop="true" data-c="#f56954" data-hc="#f56954"
-                                       title="@lang('groups/form.delete_group')"></i>
+                                       title="@lang('staffs/form.delete_group')"></i>
                                 </a>
                                     
                             </td>

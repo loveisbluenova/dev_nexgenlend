@@ -157,7 +157,7 @@
                                     </li>
                                     <li id="menu-item-899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-899"><a title="About Us" href="{{ URL::to('about-us') }}"><span class="link-inner">About Us</span></a>
                                         <ul class="sub-menu">
-                                            <li id="menu-item-902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902"><a title="Meet Our Team" href="{{ URL::to('meet-our-team') }}"><span class="link-inner">Meet Our Team</span></a></li>
+                                            <li id="menu-item-902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902"><a title="Meet Our Team" href={{ URL::to('meet-our-team') }}><span class="link-inner">Meet Our Team</span></a></li>
                                             <li id="menu-item-903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-903"><a title="Submit Feedback" href="{{ URL::to('submit-testimonial') }}"><span class="link-inner">Submit Feedback</span></a></li>
                                             <li id="menu-item-904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-904"><a title="Testimonials" href="{{ URL::to('testimonials') }}"><span class="link-inner">Testimonials</span></a></li>
                                         </ul>

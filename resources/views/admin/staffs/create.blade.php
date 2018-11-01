@@ -120,4 +120,5 @@
         type="text/javascript"></script>
 <script src="{{ asset('assets/vendors/iCheck/js/icheck.js') }}"></script>
 <script src="{{ asset('assets/js/pages/validation.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/js/pages/adduser.js') }}"></script>
 @stop

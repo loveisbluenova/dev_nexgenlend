@@ -23,7 +23,7 @@ class CreateStaffsTable extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('pic');
-            $table->string('profile')->nullable();
+            $table->text('profile')->nullable();
             $table->timestamps();
         });
     }

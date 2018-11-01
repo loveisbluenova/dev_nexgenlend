@@ -37,7 +37,7 @@ class StaffRequest extends FormRequest
                     'NMLS' => 'required',
                     'email' => 'required|email|unique:staffs,email',
                     'phone' => 'required|unique:staffs,phone',
-                    'pic_file' => 'mimes:jpg,jpeg,bmp,png,gif|max:10000'
+                    'pic_file' => 'mimes:jpg,jpeg,bmp,png,gif|max:100000000000000'
                 ];
             }
             case 'PUT':
@@ -49,7 +49,7 @@ class StaffRequest extends FormRequest
                     'NMLS' => 'required',
                     'email' => 'required|unique:staffs,email,' . $this->staff->id,
                     'phone' => 'required|unique:staffs,phone' . $this->staff->id,
-                    'pic_file' => 'image|mimes:jpg,jpeg,bmp,png|max:10000'
+                    'pic_file' => 'image|mimes:jpg,jpeg,bmp,png|max:100000000000000'
                 ];
             }
             default:

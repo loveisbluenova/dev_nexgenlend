@@ -134,7 +134,7 @@ Route::group(['prefix' => 'admin','namespace'=>'Admin', 'middleware' => 'admin',
 
     #Staffs
     Route::resource('staffs', 'StaffsController');
-    Route::get('staffs/data', 'StaffsController@data')->name('staffs.data');
+    Route::get('staffs/{id}/delete', 'StaffsController@delete');
 
 
     /* laravel example routes */
@@ -222,6 +222,7 @@ Route::get('blog/{slug}/tag', 'BlogController@getBlogTag');
 Route::get('blogitem/{slug?}', 'BlogController@getBlog');
 Route::post('blogitem/{blog}/comment', 'BlogController@storeComment');
 
+Route::get('meet-our-team', 'StaffsController@index')->name('meet-our-teams');
 
 Route::get('{name?}', 'FrontEndController@showFrontEndView');
 
@@ -241,6 +242,8 @@ Route::view('loan-options/fixed-rate-mortgage', 'loan-options.fixed-rate-mortgag
 Route::view('loan-options/fha-loan-in-boise-id', 'loan-options.fha-loan-in-boise-id');
 Route::view('loan-options/va-home-loan', 'loan-options.va-home-loan');
 Route::view('loan-options/jumbo-home-loan', 'loan-options.jumbo-home-loan');
+
+
 
 # End of frontend views
 
