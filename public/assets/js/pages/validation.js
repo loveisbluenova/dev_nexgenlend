@@ -93,8 +93,8 @@ $(document).ready(function() {
     });
     $('.BDC_CaptchaImageDiv').find('a').remove();
     $('#reset').on('click', function () {
-        $('#form_validation').bootstrapValidator("resetForm", true);
-        $("#form_validation").find(".icheckbox_minimal-blue").removeClass('checked');
+        $('#tryitForm').bootstrapValidator("resetForm", true);
+        $("#tryitForm").find(".icheckbox_minimal-blue").removeClass('checked');
     });
     $("#form-validation3").bootstrapValidator({
         fields: {
@@ -197,6 +197,20 @@ $(document).ready(function() {
                     }
                 }
             },
+            job: {
+                validators: {
+                    notEmpty: {
+                        message: 'The Job is required and cannot be empty'
+                    }
+                }
+            },
+            NMLS: {
+                validators: {
+                    notEmpty: {
+                        message: 'The NMLS is required and cannot be empty'
+                    }
+                }
+            },
             email: {
                 validators: {
                     notEmpty: {
@@ -204,6 +218,24 @@ $(document).ready(function() {
                     },
                     emailAddress: {
                         message: 'The input is not a valid email address'
+                    }
+                }
+            },
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: 'The home number is required'
+                    },
+                    regexp: {
+                        regexp: /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/,
+                        message: 'Enter valid phone number'
+                    }
+                }
+            },
+            profile: {
+                validators: {
+                    notEmpty: {
+                        message: 'The profile is required'
                     }
                 }
             },

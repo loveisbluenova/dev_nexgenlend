@@ -26,128 +26,84 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <i class="livicon" data-name="staff-add" data-size="18" data-c="#fff" data-hc="#fff" data-loop="true"></i>
-                            Add New Staff
+                        <i class="livicon" data-name="staff-add" data-size="18" data-c="#fff" data-hc="#fff" data-loop="true"></i> Add New Staff
                     </h3>
-                    <span class="pull-right">
-                         <i class="glyphicon glyphicon-chevron-up clickable"></i>
+                            <span class="pull-right">
+                                    <i class="glyphicon glyphicon-chevron-up clickable"></i>
                          <i class="glyphicon glyphicon glyphicon-remove removepanel clickable"></i>
-                    </span>
+                                </span>
                 </div>
                 <div class="panel-body">
-                    <!--main content-->
-                    <form id="commentForm" action="{{ route('admin.staffs.store') }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
-                        <!-- CSRF Token -->
+                    <form id="tryitForm" action="{{ route('admin.staffs.store') }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                        <div class="form-group">
+                            <label class="col-md-3 col-xs-12 control-label">Full name</label>
+                            <div class="col-md-4 col-xs-6 col-sm-6">
+                                <input type="text" class="form-control" name="firstName" placeholder="Enter First Name" />
+                            </div>
+                            <div class="col-md-4 col-xs-6 col-sm-6">
+                                <input type="text" class="form-control" name="lastName" placeholder="Enter Last Name" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="job" class="col-md-3 control-label">Job</label>
+                            <div class="col-md-8">
+                                <input id="job" name="job" type="text" class="form-control" value="{!! old('job') !!}" />
+                            </div>
+                        </div>
 
-                        <div id="rootwizard">
-                            <div class="tab-content">
-
-                                <h2 class="hidden">&nbsp;</h2>
-                                <div class="form-group {{ $errors->first('first_name', 'has-error') }}">
-                                    <label for="first_name" class="col-sm-2 control-label">First Name *</label>
-                                    <div class="col-sm-10">
-                                        <input id="first_name" name="first_name" type="text" placeholder="First Name" class="form-control required" value="{!! old('first_name') !!}" /> {!! $errors->first('first_name', '<span class="help-block">:message</span>') !!}
+                        <div class="form-group">
+                            <label for="address" class="col-md-3 control-label">NMLS#</label>
+                            <div class="col-md-8">
+                                <input id="NMLS" name="NMLS" type="text" class="form-control" value="{!! old('NMLS') !!}" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Email Address</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" name="email" placeholder="Enter Email Address" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Phone Number</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" name="phone" id="phone" placeholder="(814) 555-1234" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pic" class="col-md-3 control-label">Profile picture</label>
+                            <div class="col-md-8">
+                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                    <div class="fileinput-new thumbnail" style="width: 200px; height: 200px;">
+                                        <img src="http://placehold.it/200x200" alt="profile pic">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 200px;"></div>
+                                    <div>
+                                        <span class="btn btn-default btn-file">
+                            <span class="fileinput-new">Select image</span>
+                                        <span class="fileinput-exists">Change</span>
+                                        <input id="pic" name="pic_file" type="file" class="form-control" />
+                                        </span>
+                                        <a href="#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
                                     </div>
                                 </div>
-
-                                <div class="form-group {{ $errors->first('last_name', 'has-error') }}">
-                                    <label for="last_name" class="col-sm-2 control-label">Last Name *</label>
-                                    <div class="col-sm-10">
-                                        <input id="last_name" name="last_name" type="text" placeholder="Last Name" class="form-control required" value="{!! old('last_name') !!}" /> {!! $errors->first('last_name', '<span class="help-block">:message</span>') !!}
-                                    </div>
+                                <span class="help-block">{{ $errors->first('pic_file', ':message') }}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="profile" class="col-md-3 control-label">Profile</small></label>
+                            <div class="col-md-8">
+                                <textarea name="profile" id="profile" class="form-control resize_vertical" rows="10">{!! old('profile') !!}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-8">
+                                <div class="col-md-6">
+                                    <input type="submit" name="btnSubmit" id="btnSubmit" value="Register" class="btn btn-primary btn-block btn-md btn-responsive">
                                 </div>
-
-                                <div class="form-group {{ $errors->first('email', 'has-error') }}">
-                                    <label for="email" class="col-sm-2 control-label">Email *</label>
-                                    <div class="col-sm-10">
-                                        <input id="email" name="email" placeholder="E-mail" type="text" class="form-control required email" value="{!! old('email') !!}" /> {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
-                                    </div>
+                                <div class="col-md-6">
+                                    <input type="button" value="Reset" id="reset" class=" btn btn-success btn-block btn-md btn-responsive">
                                 </div>
-
-                                <div class="form-group {{ $errors->first('pic_file', 'has-error') }}">
-                                    <label for="pic" class="col-sm-2 control-label">Profile picture</label>
-                                    <div class="col-sm-10">
-                                        <div class="fileinput fileinput-new" data-provides="fileinput">
-                                            <div class="fileinput-new thumbnail" style="width: 200px; height: 200px;">
-                                                <img src="http://placehold.it/200x200" alt="profile pic">
-                                            </div>
-                                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 200px;"></div>
-                                            <div>
-                                                <span class="btn btn-default btn-file">
-                                    <span class="fileinput-new">Select image</span>
-                                                <span class="fileinput-exists">Change</span>
-                                                <input id="pic" name="pic_file" type="file" class="form-control" />
-                                                </span>
-                                                <a href="#" class="btn btn-danger fileinput-exists" data-dismiss="fileinput">Remove</a>
-                                            </div>
-                                        </div>
-                                        <span class="help-block">{{ $errors->first('pic_file', ':message') }}</span>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="bio" class="col-sm-2 control-label">Bio <small>(brief intro) *</small></label>
-                                    <div class="col-sm-10">
-                                        <textarea name="bio" id="bio" class="form-control resize_vertical" rows="4">{!! old('bio') !!}</textarea>
-                                    </div>
-                                    {!! $errors->first('bio', '<span class="help-block">:message</span>') !!}
-                                </div>
-
-                                <div class="form-group {{ $errors->first('gender', 'has-error') }}">
-                                    <label for="email" class="col-sm-2 control-label">Gender *</label>
-                                    <div class="col-sm-10">
-                                        <select class="form-control" title="Select Gender..." name="gender">
-                                            <option value="">Select</option>
-                                            <option value="male" @if(old( 'gender')==='male' ) selected="selected" @endif>Male
-                                            </option>
-                                            <option value="female" @if(old( 'gender')==='female' ) selected="selected" @endif>
-                                                Female
-                                            </option>
-                                            <option value="other" @if(old( 'gender')==='other' ) selected="selected" @endif>Other
-                                            </option>
-
-                                        </select>
-                                    </div>
-                                    <span class="help-block">{{ $errors->first('gender', ':message') }}</span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="state" class="col-sm-2 control-label">State</label>
-                                    <div class="col-sm-10">
-                                        <input id="state" name="state" type="text" class="form-control" value="{!! old('state') !!}" />
-                                    </div>
-                                    <span class="help-block">{{ $errors->first('state', ':message') }}</span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="city" class="col-sm-2 control-label">City</label>
-                                    <div class="col-sm-10">
-                                        <input id="city" name="city" type="text" class="form-control" value="{!! old('city') !!}" />
-                                    </div>
-                                    <span class="help-block">{{ $errors->first('city', ':message') }}</span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="address" class="col-sm-2 control-label">Address</label>
-                                    <div class="col-sm-10">
-                                        <input id="address" name="address" type="text" class="form-control" value="{!! old('address') !!}" />
-                                    </div>
-                                    <span class="help-block">{{ $errors->first('address', ':message') }}</span>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="postal" class="col-sm-2 control-label">Postal/zip</label>
-                                    <div class="col-sm-10">
-                                        <input id="postal" name="postal" type="text" class="form-control" value="{!! old('postal') !!}" />
-                                    </div>
-                                    <span class="help-block">{{ $errors->first('postal', ':message') }}</span>
-                                </div>
-                           
-                                <ul class="pager wizard">
-                                    <li class="next finish" style="display:block;"><a href="javascript:;">Finish</a></li>
-                                </ul>
-                                <button class="next finish">Finish</button>
                             </div>
                         </div>
                     </form>
@@ -158,12 +114,10 @@
     <!--row end-->
 </section>
 @stop {{-- page level scripts --}} @section('footer_scripts')
+<script src="{{ asset('assets/vendors/jasny-bootstrap/js/jasny-bootstrap.js') }}"
+            type="text/javascript"></script>
+<script src="{{ asset('assets/vendors/bootstrapvalidator/js/bootstrapValidator.min.js') }}"
+        type="text/javascript"></script>
 <script src="{{ asset('assets/vendors/iCheck/js/icheck.js') }}"></script>
-<script src="{{ asset('assets/vendors/moment/js/moment.min.js') }}"></script>
-<script src="{{ asset('assets/vendors/jasny-bootstrap/js/jasny-bootstrap.js') }}" type="text/javascript"></script>
-<script src="{{ asset('assets/vendors/select2/js/select2.js') }}" type="text/javascript"></script>
-<script src="{{ asset('assets/vendors/bootstrapwizard/jquery.bootstrap.wizard.js') }}" type="text/javascript"></script>
-<script src="{{ asset('assets/vendors/bootstrapvalidator/js/bootstrapValidator.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('assets/vendors/datetimepicker/js/bootstrap-datetimepicker.min.js') }}" type="text/javascript"></script>
-<!-- <script src="{{ asset('assets/js/pages/adduser.js') }}"></script> -->
+<script src="{{ asset('assets/js/pages/validation.js') }}" type="text/javascript"></script>
 @stop

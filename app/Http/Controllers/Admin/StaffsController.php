@@ -1,8 +1,6 @@
 <?php namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\JoshController;
-use App\Http\Requests\StaffRequest;
-use App\Mail\Register;
+use App\Http\Controllers\Controller;
 use App\Staff;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use File;
@@ -13,12 +11,11 @@ use Redirect;
 use Sentinel;
 use URL;
 use View;
-use Yajra\DataTables\DataTables;
 use Validator;
 
 
 
-class StaffsController extends JoshController
+class StaffsController extends Controller
 {
 
     /**
@@ -41,34 +38,6 @@ class StaffsController extends JoshController
     /**
      * @return mixed
      */
-    public function data()
-    {
-        $staffs = Staff::get(['id', 'first_name', 'last_name', 'job', 'NMLS', 'email', 'phone']);
-
-        return DataTables::of($staffs)
-            ->editColumn('created_at',function(Staff $staff) {
-                return $staff->created_at->diffForHumans();
-            })
-            ->addColumn('status',function($user){
-
-                if($activation = Activation::completed($staff)){
-
-                    return 'Activated';} else
-                    return 'Pending';
-
-            })
-            ->addColumn('actions',function($staff) {
-                $actions = '<a href='. route('admin.staffs.show', $staff->id) .'><i class="livicon" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view staff"></i></a>
-                            <a href='. route('admin.staffs.edit', $staff->id) .'><i class="livicon" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="update staff"></i></a>';
-                if ((Sentinel::getUser()->id != $user->id) && ($user->id != 1)) {
-                    $actions .= '<a href='. route('admin.staffs.confirm-delete', $staff->id) .' data-toggle="modal" data-target="#delete_confirm"><i class="livicon" data-name="staff-remove" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete staff"></i></a>';
-                }
-                return $actions;
-            })
-            ->rawColumns(['actions'])
-            ->make(true);
-    }
-
     /**
      * Create new staff
      *
@@ -85,7 +54,7 @@ class StaffsController extends JoshController
      *
      * @return Redirect
      */
-    public function store(StaffRequest $request)
+    public function store(Request $request)
     {
 
         //upload image
@@ -98,12 +67,13 @@ class StaffsController extends JoshController
         }
 
         $new_staff = new Staff;
-        $new_staff->name = $request->input('name');
+        $new_staff->first_name = $request->input('firstName');
+        $new_staff->last_name = $request->input('lastName');
         $new_staff->job = $request->input('job');
         $new_staff->NMLS = $request->input('NMLS');
         $new_staff->email = $request->input('email');
         $new_staff->phone = $request->input('phone');
-        $new_staff->pic = $request->$request['pic'];
+        $new_staff->pic = $request['pic'];
         $new_staff->profile = $request->$request['profile'];
         $new_staff->save();
 
