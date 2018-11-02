@@ -105,7 +105,7 @@
     @yield('header_styles')
     <!--end of page level css-->
 </head>
-@if(Request::is ('/') || Request::is('mortgage-calculator') || Request::is('loan-options') || Request::is('meet-our-team'))
+@if(Request::is ('/') || Request::is('mortgage-calculator') || Request::is('loan-options') || Request::is('meet-our-team') || Request::is('staff-member/*'))
     <body class="page-template-default page page-id-6 wp-custom-logo wpex-theme wpex-responsive full-width-main-layout has-composer wpex-live-site content-full-width sidebar-widget-icons has-overlay-header page-header-disabled page-with-slider has-post-slider post-slider-below-title wpex-mobile-toggle-menu-icon_buttons has-mobile-menu wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
 @else
     <body class="page-template-default page page-id-344 page-parent wp-custom-logo wpex-theme wpex-responsive full-width-main-layout has-composer wpex-live-site content-right-sidebar has-sidebar has-breadcrumbs sidebar-widget-icons hasnt-overlay-header wpex-mobile-toggle-menu-icon_buttons has-mobile-menu wpb-js-composer js-comp-ver-5.5.2 vc_responsive">

@@ -224,6 +224,8 @@ Route::post('blogitem/{blog}/comment', 'BlogController@storeComment');
 
 Route::get('meet-our-team', 'StaffsController@index')->name('meet-our-teams');
 
+Route::get('staff-member/{slug}', 'StaffsController@show');
+
 Route::get('{name?}', 'FrontEndController@showFrontEndView');
 
 # Purchase
