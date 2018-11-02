@@ -8,7 +8,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <title>
         @section('title')
-        | Welcome to Josh Frontend
+        | NexGen Lending
         @show
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -105,7 +105,7 @@
     @yield('header_styles')
     <!--end of page level css-->
 </head>
-@if(Request::is ('/') || Request::is('mortgage-calculator') || Request::is('loan-options') || Request::is('meet-our-team') || Request::is('staff-member/*'))
+@if(Request::is ('/') || Request::is('mortgage-calculator') || Request::is('loan-options') || Request::is('meet-our-team') || Request::is('staff-member/*') || Request::is('contact-us'))
     <body class="page-template-default page page-id-6 wp-custom-logo wpex-theme wpex-responsive full-width-main-layout has-composer wpex-live-site content-full-width sidebar-widget-icons has-overlay-header page-header-disabled page-with-slider has-post-slider post-slider-below-title wpex-mobile-toggle-menu-icon_buttons has-mobile-menu wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
 @else
     <body class="page-template-default page page-id-344 page-parent wp-custom-logo wpex-theme wpex-responsive full-width-main-layout has-composer wpex-live-site content-right-sidebar has-sidebar has-breadcrumbs sidebar-widget-icons hasnt-overlay-header wpex-mobile-toggle-menu-icon_buttons has-mobile-menu wpb-js-composer js-comp-ver-5.5.2 vc_responsive">
@@ -162,7 +162,7 @@
                                             <li id="menu-item-904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-904"><a title="Testimonials" href="{{ URL::to('testimonials') }}"><span class="link-inner">Testimonials</span></a></li>
                                         </ul>
                                     </li>
-                                    <li id="menu-item-901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901"><a title="Contact Us" href="contact-us/index.html"><span class="link-inner">Contact Us</span></a></li>
+                                    <li id="menu-item-901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901"><a title="Contact Us" href="{{ URL::to('contact-us') }}"><span class="link-inner">Contact Us</span></a></li>
                                     <li id="menu-item-1198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1198"><a title="Blog" href="blog/index.html"><span class="link-inner">Blog</span></a></li>
                                     <li id="menu-item-1779" class="menu-button menu-item menu-item-type-post_type menu-item-object-page menu-item-1779"><a title="Apply Online" href="apply-online/index.html"><span class="link-inner">Apply Online</span></a></li>
                                     <li id="menu-item-921" class="menu-button menu-item menu-item-type-post_type menu-item-object-page menu-item-921"><a title="Get A Quote" href="quote/index.html"><span class="link-inner">Get A Quote</span></a></li>
